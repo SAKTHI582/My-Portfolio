@@ -1,89 +1,542 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.19.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.19.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.19.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <title>Sakthi Ganesh S | Cloud & DevOps Portfolio</title>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <meta name="description"
+          content="Sakthi Ganesh S - MCA Graduate, Cloud and DevOps Enthusiast Portfolio">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+    <nav>
+        <div class="logo">
+            Sakthi<span>.</span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+
+<section id="home">
+
+    <div class="hero">
+
+        <div>
+
+            <div class="hero-small">
+                👋 Welcome to my portfolio
+            </div>
+
+            <h1>
+                Hi, I'm <span>Sakthi Ganesh S</span>
+            </h1>
+
+            <h2>
+                MCA Graduate | Cloud & DevOps Enthusiast
+            </h2>
+
+            <p>
+                I'm an MCA graduate passionate about Cloud Computing,
+                DevOps, automation and software development.
+                I enjoy building practical applications and learning
+                modern technologies used in real-world IT environments.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    View Projects
+                </a>
+
+                <a href="https://www.linkedin.com/in/sakthi-ganesh-s-2922682a0/"
+                   target="_blank"
+                   class="btn btn-outline">
+                    LinkedIn
+                </a>
+
+                <a href="https://github.com/SAKTHI582"
+                   target="_blank"
+                   class="btn btn-outline">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <div class="hero-card-inner">
+
+                <div class="initial">
+                    SG
+                </div>
+
+                <p>
+                    Cloud • DevOps • Python
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+</section>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-title">
+
+        <h2>About <span>Me</span></h2>
+
+        <p>Get to know me</p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <h3>Who I Am</h3>
+
+            <p>
+                I am an MCA graduate interested in building my career
+                in Cloud Computing and DevOps. I have a strong interest
+                in Linux, cloud infrastructure, containers, CI/CD,
+                automation and application deployment.
+            </p>
+
+            <br>
+
+            <p>
+                My goal is to continuously improve my technical skills
+                and work on real-world projects that solve practical
+                problems.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h3>Quick Information</h3>
+
+            <ul class="info-list">
+
+                <li>
+                    <strong>Name:</strong>
+                    Sakthi Ganesh S
+                </li>
+
+                <li>
+                    <strong>Qualification:</strong>
+                    Master of Computer Applications
+                </li>
+
+                <li>
+                    <strong>Career Interest:</strong>
+                    Cloud & DevOps
+                </li>
+
+                <li>
+                    <strong>Programming:</strong>
+                    Python, SQL
+                </li>
+
+                <li>
+                    <strong>Location:</strong>
+                    Coimbatore, Tamil Nadu
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <div class="section-title">
+
+        <h2>Technical <span>Skills</span></h2>
+
+        <p>Technologies I'm learning and working with</p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill">
+            <div class="skill-icon">☁️</div>
+            <h3>Cloud Computing</h3>
+            <p>Cloud fundamentals & infrastructure</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">♾️</div>
+            <h3>DevOps</h3>
+            <p>CI/CD & automation</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">🐳</div>
+            <h3>Docker</h3>
+            <p>Containers & Docker Compose</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">☸️</div>
+            <h3>Kubernetes</h3>
+            <p>Container orchestration</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">🔧</div>
+            <h3>Jenkins</h3>
+            <p>CI/CD pipelines</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">🌱</div>
+            <h3>Git & GitHub</h3>
+            <p>Version control</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">🐍</div>
+            <h3>Python</h3>
+            <p>Application development</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">🗄️</div>
+            <h3>SQL / MySQL</h3>
+            <p>Database management</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">🏗️</div>
+            <h3>Terraform</h3>
+            <p>Infrastructure as Code</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">⚙️</div>
+            <h3>Linux</h3>
+            <p>Linux administration basics</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">📦</div>
+            <h3>Maven</h3>
+            <p>Build automation</p>
+        </div>
+
+        <div class="skill">
+            <div class="skill-icon">⎈</div>
+            <h3>Helm</h3>
+            <p>Kubernetes package management</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="section-title">
+
+        <h2>My <span>Projects</span></h2>
+
+        <p>Projects I've worked on</p>
+
+    </div>
+
+
+    <div class="projects">
+
+        <div class="project">
+
+            <h3>
+                Product Expiry Alert System
+            </h3>
+
+            <p>
+                A web-based medical shop management system designed
+                to monitor medicine expiry dates and provide alerts
+                for expired and soon-to-expire products.
+            </p>
+
+            <div class="tags">
+
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Jenkins</span>
+
+            </div>
+
+            <a
+                href="https://github.com/SAKTHI582/Product-Expiry-Alert-System"
+                target="_blank"
+                class="btn btn-outline">
+                View on GitHub →
+            </a>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>
+                Temperature Based Fan Speed Control
+            </h3>
+
+            <p>
+                An IoT project using Arduino and DHT11 temperature
+                sensor to automatically control fan speed according
+                to the detected temperature.
+            </p>
+
+            <div class="tags">
+
+                <span class="tag">Arduino</span>
+                <span class="tag">DHT11</span>
+                <span class="tag">IoT</span>
+                <span class="tag">C/C++</span>
+                <span class="tag">Sensors</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <div class="section-title">
+
+        <h2>My <span>Education</span></h2>
+
+        <p>Academic background</p>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <h3>
+                Master of Computer Applications (MCA)
+            </h3>
+
+            <div class="year">
+                2023 – 2025
+            </div>
+
+            <p>
+                Hindusthan College of Engineering and Technology,
+                Coimbatore
+            </p>
+
+            <p>
+                CGPA: 7.57 / 10
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>
+                Bachelor of Science in Information Technology
+            </h3>
+
+            <div class="year">
+                2020 – 2023
+            </div>
+
+            <p>
+                G. Venkataswamy Naidu College,
+                Kovilpatti
+            </p>
+
+            <p>
+                CGPA: 7.27 / 10
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- DEVOPS JOURNEY -->
+
+<section>
+
+    <div class="section-title">
+
+        <h2>My <span>DevOps Journey</span></h2>
+
+        <p>Technologies I'm currently developing my skills in</p>
+
+    </div>
+
+
+    <div class="devops-box">
+
+        <h3>
+            Cloud → Containers → CI/CD → Kubernetes
+        </h3>
+
+        <p>
+            I am currently focusing on building practical knowledge
+            in Cloud Computing and DevOps by working with deployment,
+            containerization, automation and infrastructure tools.
+        </p>
+
+
+        <div class="devops-tools">
+
+            <span class="tool">Linux</span>
+            <span class="tool">Git</span>
+            <span class="tool">GitHub</span>
+            <span class="tool">Docker</span>
+            <span class="tool">Jenkins</span>
+            <span class="tool">Kubernetes</span>
+            <span class="tool">Terraform</span>
+            <span class="tool">Helm</span>
+            <span class="tool">Nginx</span>
+            <span class="tool">Ansible</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="section-title">
+
+        <h2>Contact <span>Me</span></h2>
+
+        <p>Let's connect</p>
+
+    </div>
+
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+
+            <h3>Let's Work Together</h3>
+
+            <p>
+                I'm interested in entry-level opportunities in
+                Cloud Computing, DevOps and IT.
+            </p>
+
+            <p>
+                If you're a recruiter or someone interested in
+                collaborating, feel free to connect with me.
+            </p>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>Online Profiles</h3>
+
+            <a
+                class="contact-link"
+                href="https://www.linkedin.com/in/sakthi-ganesh-s-2922682a0/"
+                target="_blank">
+                🔗 LinkedIn
+            </a>
+
+            <a
+                class="contact-link"
+                href="https://github.com/SAKTHI582"
+                target="_blank">
+                💻 GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 <span>Sakthi Ganesh S</span>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Built with HTML, CSS & JavaScript
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
 </html>
